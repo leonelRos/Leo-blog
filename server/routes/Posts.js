@@ -47,7 +47,7 @@ router.put("/:id", async(req,res)=>{
         const updated = await Post.findByIdAndUpdate(
             req.params.id,
             {title,dates, notes},
-            {new: true, runValidators: true}
+            {returnDocument: "after", runValidators: true}
         );
         if(!updated) return res.status(404).json({error: "Post not found"});
         res.json(updated);

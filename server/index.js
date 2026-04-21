@@ -1,26 +1,30 @@
-require(".dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const postRoutes = require("./routes/postRoutes");
+const postRoutes = require("./routes/Posts");
 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 //ROUTES
-app.use("api/posts", postRoutes);
+app.use("/api/posts", postRoutes);
 
 //health check
-app.get("api/health", (req, res)=>{
+app.get("/api/health", (req, res)=>{
     res.json({status: "ok" , message: "Server is running"});
 })
 
 //Connect to MongoDB
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/blogdb";
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/blogdb";
 
 mongoose.connect(MONGO_URI)
     .then(() =>{
