@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://main.d3m5e6dq2ibxpo.amplifyapp.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
