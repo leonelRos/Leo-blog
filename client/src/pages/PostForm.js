@@ -77,7 +77,7 @@ export default function PostForm({ mode }) {
       <div className="container">
         <header className="site-header">
           <div className="header-row">
-            <h1>The Journal</h1>
+            <h1>The Journey</h1>
           </div>
         </header>
 
@@ -93,7 +93,7 @@ export default function PostForm({ mode }) {
               </>
             ) : (
               <>
-                New <span>Entry</span>
+                New <span>Blog</span>
               </>
             )}
           </h2>
@@ -110,7 +110,7 @@ export default function PostForm({ mode }) {
                 className="form-control"
                 value={form.title}
                 onChange={handleChange}
-                placeholder="Give your entry a title…"
+                placeholder="blog title"
                 maxLength={200}
                 required
               />

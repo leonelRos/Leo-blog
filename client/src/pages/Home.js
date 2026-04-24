@@ -51,11 +51,11 @@ export default function Home() {
         <header className="site-header">
           <div className="header-row">
             <div>
-              <h1>The Journal</h1>
+              <h1>The Journey</h1>
               <p>Thoughts & Notes</p>
             </div>
             <button className="btn btn-primary" onClick={() => navigate("/new")}>
-              + New Entry
+              + New Blog
             </button>
           </div>
         </header>
