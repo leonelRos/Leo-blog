@@ -2,6 +2,9 @@
 
 A full-stack blog application built with MongoDB, Express, Node.js, and React.
 
+## Live Version
+https://main.d3m5e6dq2ibxpo.amplifyapp.com/
+
 ## Features
 - Create, read, update, and delete blog entries
 - Fields: Title, Date, Notes
