@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "leo-blog-production.up.railway.app/api",
+    baseURL: "https://leo-blog-production.up.railway.app/api",
 });
 
 export const fetchPosts = () => API.get("/posts");
